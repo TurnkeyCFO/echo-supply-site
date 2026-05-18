@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Deploy Test — verify</title>
+<meta name="description" content="verify" />
+<link rel="icon" type="image/png" href="/_deploytest/assets/favicon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Deploy Test" />
+<meta property="og:description" content="verify" />
+<meta property="og:image" content="https://placehold.co/1280x960" />
+<meta property="og:url" content="/_deploytest/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Deploy Test" />
+<meta name="twitter:description" content="verify" />
+<meta name="twitter:image" content="https://placehold.co/1280x960" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" />
+
+<style>
+  :root{
+    --brand-primary:#333;
+    --brand-accent:#999;
+    --ink:#111;
+    --paper:#fff;
+    --font-display:"Inter", Georgia, serif;
+    --font-body:"Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px}
+  a{color:var(--brand-primary);text-decoration:none}
+  a:hover,a:focus-visible{text-decoration:underline}
+  .skip{position:absolute;left:-9999px;top:0}
+  .skip:focus{left:1rem;top:1rem;background:var(--ink);color:var(--paper);padding:.5rem .75rem;border-radius:.5rem;z-index:100}
+  .hero{padding:2.5rem 1.25rem 2rem;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.02) 100%)}
+  .hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,7vw,3.5rem);line-height:1.05;margin:0 0 .5rem;letter-spacing:-.01em}
+  .hero p.tag{font-size:clamp(1rem,3vw,1.25rem);color:var(--ink);opacity:.8;max-width:36ch;margin:.25rem auto 1.5rem}
+  .hero img{width:min(100%,640px);height:auto;border-radius:1rem;display:block;margin:0 auto;aspect-ratio:4/3;object-fit:cover;background:#eee}
+  .btn{display:inline-block;background:var(--brand-primary);color:#fff;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;border:0;cursor:pointer;font-family:inherit;font-size:1rem;margin-top:1.25rem}
+  .btn:hover,.btn:focus-visible{filter:brightness(.95);text-decoration:none;color:#fff}
+</style>
+<link rel="preload" href="/_deploytest/styles.css" as="style" onload="this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/_deploytest/styles.css" /></noscript>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Deploy Test","description":"verify","url":"/_deploytest/","image":"https://placehold.co/1280x960"}
+</script>
+
+<script src="/_deploytest/config.js" defer></script>
+<script src="/_deploytest/cart.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#products">Skip to products</a>
+
+<header class="hero" role="banner">
+  <h1>Deploy Test</h1>
+  <p class="tag">verify</p>
+  <img src="https://placehold.co/1280x960" alt="Deploy Test hero artwork" loading="eager" fetchpriority="high" width="1280" height="960" />
+  <a class="btn" href="#products">Shop the collection</a>
+</header>
+
+<section class="trust" aria-label="Why shop with us">
+  <p>t</p>
+</section>
+
+<main id="products" class="grid-wrap" aria-label="Products">
+  <h2 class="section-h">The collection</h2>
+  <div id="product-grid" class="product-grid"></div>
+</main>
+
+<section class="about" aria-label="About">
+  <h2 class="section-h">Our story</h2>
+  <div id="about-body" class="about-body"></div>
+</section>
+
+<footer role="contentinfo">
+  <p class="foot-name">Deploy Test</p>
+  <p class="foot-meta">&copy; <span id="year"></span> Deploy Test. Powered by Printful. Secure checkout by Stripe.</p>
+  <nav aria-label="Legal">
+    <a href="/_deploytest/privacy.html">Privacy</a>
+    <span aria-hidden="true">·</span>
+    <a href="/_deploytest/shipping.html">Shipping</a>
+    <span aria-hidden="true">·</span>
+    <a href="/_deploytest/returns.html">Returns</a>
+  </nav>
+</footer>
+
+<dialog id="product-modal" aria-labelledby="modal-title">
+  <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+  <div class="modal-grid">
+    <div class="gallery">
+      <img id="gallery-main" alt="" />
+      <div id="gallery-thumbs" class="thumbs" role="tablist"></div>
+    </div>
+    <div class="modal-body">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div class="audience" aria-label="Choose age">
+        <span class="audience-legend">Age</span>
+        <div id="audience-segmented" class="audience-segmented" role="tablist" aria-label="Age group"></div>
+      </div>
+      <label class="size-label">Size
+        <select id="size-select" aria-label="Size"></select>
+      </label>
+      <button id="size-guide-btn" type="button" class="size-guide-link" aria-haspopup="dialog">Size guide</button>
+      <a id="buy-btn" class="btn btn-buy" target="_blank" rel="noopener">Buy now</a>
+      <p class="fabric-strip">
+        <span class="fabric-line">{{fabric_specs}}</span>
+        <span class="fabric-line">Ships in {{shipping_estimate}} from US-based Printful facility.</span>
+      </p>
+      <p class="checkout-note">Secure checkout opens in a new tab. Free US shipping over $50.</p>
+    </div>
+  </div>
+</dialog>
+
+<!-- Size chart dialog. Inline (no extra HTTP request) to keep Lighthouse mobile >=90.
+     SEO trade-off: per-product OG meta is updated via JS at modal-open time
+     (see cart.js); we deliberately do NOT pre-bake per-product <meta> tags
+     because that would explode the rendered file count for a static SPA. -->
+<dialog id="size-chart-dialog" aria-labelledby="size-chart-title">
+  <button class="modal-close" type="button" aria-label="Close size guide" data-close-size-chart>&times;</button>
+  <div class="size-chart-body">
+    <h3 id="size-chart-title">Size guide</h3>
+    <p class="size-chart-note">Measurements in inches. Fit is unisex / true-to-size; size up for an oversized fit.</p>
+
+    <h4>Adult unisex (Bella+Canvas 3001)</h4>
+    <table class="size-chart-table">
+      <thead><tr><th>Size</th><th>Chest</th><th>Body length</th></tr></thead>
+      <tbody>
+        <tr><td>XS</td><td>31-34</td><td>27</td></tr>
+        <tr><td>S</td><td>34-37</td><td>28</td></tr>
+        <tr><td>M</td><td>38-41</td><td>29</td></tr>
+        <tr><td>L</td><td>42-45</td><td>30</td></tr>
+        <tr><td>XL</td><td>46-49</td><td>31</td></tr>
+        <tr><td>2XL</td><td>50-53</td><td>32</td></tr>
+        <tr><td>3XL</td><td>54-57</td><td>33</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Youth (Bella+Canvas 3001Y)</h4>
+    <table class="size-chart-table">
+      <thead><tr><th>Size</th><th>Chest</th><th>Body length</th></tr></thead>
+      <tbody>
+        <tr><td>YXS</td><td>26-27</td><td>20</td></tr>
+        <tr><td>YS</td><td>28-29</td><td>22</td></tr>
+        <tr><td>YM</td><td>30-31</td><td>23.5</td></tr>
+        <tr><td>YL</td><td>32-33</td><td>25</td></tr>
+        <tr><td>YXL</td><td>34-35</td><td>26.5</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Toddler (Bella+Canvas 3001T)</h4>
+    <table class="size-chart-table">
+      <thead><tr><th>Size</th><th>Chest</th><th>Body length</th></tr></thead>
+      <tbody>
+        <tr><td>2T</td><td>24</td><td>14</td></tr>
+        <tr><td>3T</td><td>25</td><td>14.5</td></tr>
+        <tr><td>4T</td><td>26</td><td>15.5</td></tr>
+        <tr><td>5T</td><td>27</td><td>16.5</td></tr>
+      </tbody>
+    </table>
+  </div>
+</dialog>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  if (window.STORE_CONFIG && window.STORE_CONFIG.ga_measurement_id) {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + window.STORE_CONFIG.ga_measurement_id;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", window.STORE_CONFIG.ga_measurement_id);
+  }
+</script>
+</body>
+</html>
